@@ -1,0 +1,28 @@
+.swiper {
+    width: 65%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 0 35px 70px rgba(0, 42, 190, .04);   
+  
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    padding: 45px 85px 40px;
+    overflow: visible;
+
+}
+
+.swiper-slide p {
+    font-size: 30px;
+    line-height: 1.6em;
+    margin: 25px 0 38px;
+    color: var(--primary-font-light-color);
+}
+
+.slider-info h6 {
+    font-size: 22px;
+    color: var(--primary-font-color);
+}
