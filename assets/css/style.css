@@ -31,6 +31,10 @@
     margin-top: 130px;
 }
 
+.mt-260 {
+    margin-top: 260px;
+}
+
 .primary-btn-bg-color {
     background-color: var(--primary-color);
 }
@@ -44,7 +48,12 @@
 }
 
 .btn-hover:hover {
-    background-color: #06f !important;
+    background-color: var(--primary-light-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.new:hover {
+    background-color: var(--primary-color) !important;
     color: #fff !important;
 }
 
@@ -60,13 +69,14 @@
     font-size: 18px;
 }
 
+.new-bg-color {
+    background: linear-gradient(0deg, rgba(248, 253, 255, 0), rgba(241, 252, 255, .518) 48.22%, #f6fdff);
+}
+
 /* header section */
 header {
-    position: absolute;
-    top: 0;
     width: 100%;
     z-index: 999;
-
 }
 
 header:before {
@@ -80,6 +90,34 @@ header:before {
     top: -70px;
     border-radius: 50%;
     z-index: -1;
+}
+
+.drop-down-menu {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 6px 73px 62px rgba(0, 12, 119, .03);
+    border-radius: 8px;
+    position: absolute;
+    left: 20%;
+    display: none;
+    transition: 0.3s all linear;
+}
+
+.pages:hover .drop-down-menu {
+    display: block;
+}
+
+.drop-down-menu ul li {
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.drop-down-menu ul li:hover {
+    background-color: var(--primary-color);
+}
+
+.drop-down-menu ul li:hover a {
+    color: #fff;
 }
 
 nav ul li a {
@@ -139,7 +177,7 @@ nav ul li a {
     0% {
         width: 0;
         height: 0;
-        background-color: #fff;
+        background-color: rgba(0, 0, 0, 0.508);
         opacity: 0;
     }
 
@@ -184,12 +222,19 @@ nav ul li a {
 }
 
 .play-btn:hover {
-    background-color: #ff7a41;
+    background-color: var(--primary-light-color);
+
 }
 
-.illustration-holder{
+.play-btn:hover i {
+    color: var(--primary-color) !important;
+
+}
+
+.illustration-holder {
     position: relative;
 }
+
 .illustration-holder:before {
     background: #fff;
     border-radius: 50%;
@@ -412,9 +457,136 @@ nav ul li a {
     animation: jumpingball 3s linear infinite;
     animation-delay: 1.5s;
 }
+
 /* faq section */
-.shape-36{
+.shape-36 {
     bottom: -70%;
     right: 20px;
     z-index: -1;
+}
+
+/* blog section */
+
+
+.blog-card {
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 73, 140, .05);
+    transition: 0.3s all linear;
+
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-info {
+    padding: 42px 32px 20px;
+    position: relative;
+    z-index: 999;
+}
+
+.blog-info p {
+    font-size: 25px;
+}
+
+.blog-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-image::after {
+    bottom: 20px;
+    position: absolute;
+    content: "➝";
+    font-size: 22px;
+    font-weight: 700;
+    right: 22px;
+    transform: scale(0);
+    transition: .3s all linear;
+    color: #fff;
+}
+
+.blog-image::before {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -15%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.blog-card:hover .blog-image::after {
+    transform: scale(1);
+}
+
+.blog-card:hover .blog-image::before {
+    animation: big-circle .3s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: initial;
+
+}
+
+@keyframes big-circle {
+    0% {
+        width: 0;
+        height: 0;
+        background-color: var(--primary-color);
+    }
+
+    100% {
+        width: 150px;
+        height: 150px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+    }
+}
+
+/* contact section */
+.contact p {
+    font-size: 20px;
+    line-height: 2.5rem;
+    color: var(--primary-font-light-color);
+    font-weight: 300;
+}
+
+.only-image {
+    background-color: #fff;
+    box-shadow: 0 25px 60px rgba(0, 106, 204, .05);
+    border-radius: 14px;
+    padding: 0 38px;
+    height: 75px;
+    align-content: center;
+}
+
+/* footer section */
+footer {
+    background: linear-gradient(0deg, rgba(248, 253, 255, 0), rgba(241, 252, 255, .518) 48.22%, #f6fdff);
+    padding: 85px 0 0;
+}
+
+.search-box input {
+    box-shadow: 0 10px 20px rgba(0, 33, 63, .03);
+    border-radius: 8px;
+    padding: 30px 155px 30px 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box button {
+    right: 3%;
+    bottom: 18%;
+}
+
+footer ul li a {
+    font-size: 17px;
+    color: #000;
+}
+
+footer ul li a:hover {
+    color: var(--primary-color);
 }
