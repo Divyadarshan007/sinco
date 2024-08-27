@@ -1,0 +1,64 @@
+@media (max-width:1200px) {
+    .hero-heading {
+        font-size: 45px;
+    }
+
+    .font-60 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:992px) {
+    .hero-section {
+        padding: 120px 0 100px;
+    }
+
+    .service-heading {
+        flex-wrap: wrap;
+    }
+
+    .mt-130 {
+        margin-top: 80px;
+    }
+
+    .contact-card {
+        margin-bottom: 0 !important;
+    }
+
+    .swiper-slide p {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width:768px) {
+    .profile-image img {
+        display: none;
+    }
+
+    .swiper {
+        width: 100% !important;
+    }
+
+    .swiper-slide {
+        padding: 25px 40px 20px !important;
+    }
+}
+
+@media (max-width:576px) {
+    .service-heading h2 {
+        font-size: 35px;
+    }
+
+    .work-info {
+        text-align: center;
+    }
+
+    .filter-button-group {
+        font-size: 12px !important;
+    }
+
+    .swiper-slide p {
+        font-size: 16px !important;
+    }
+
+}

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- external css link -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- media css link -->
+    <link rel="stylesheet" href="./assets/css/media.css">
     <!-- swipper-bundle css link -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <!-- swiper external css link -->
@@ -20,16 +22,16 @@
 
 <body>
 
-    <header class="px-5 py-4 position-absolute">
+    <header class="px-5 py-4 position-absolute header-back">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex gap-150 align-items-center">
                 <div class="logo">
                     <img src="./assets/images/logo_03.png" alt="" width="90px">
                 </div>
-                <nav class="navbar navbar-expand-lg ">
-                    <ul class="navbar gap-4 m-0 p-0">
+                <nav class="navbar navbar-expand-lg d-lg-flex d-none ">
+                    <ul class="navbar gap-2 m-0 p-0">
                         <li class="nav-item"> <a class="nav-link fw-medium py-3 active mx-4" href="#">Home</a></li>
-                        <li class="nav-item pages"> <a class="nav-link fw-medium py-3 mx-4" href="">Pages</a>
+                        <li class="nav-item pages"> <a class="nav-link fw-medium underline py-3 mx-4" href="">Pages</a>
                             <div class="drop-down-menu">
                                 <ul class="m-0 p-0">
                                     <li><a href="./testimonial.html">Testimonial</a></li>
@@ -37,16 +39,17 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 mx-4"
-                                href="./portfolio.html">Portfolio</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 mx-4" href="./blog.html">Blog</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 mx-4" href="./contact.html">Contact</a>
+
+                        <li class="nav-item"> <a class="nav-link fw-medium underline py-3 mx-4"
+                                href="./blog.html">Blog</a></li>
+                        <li class="nav-item"> <a class="nav-link fw-medium underline py-3 mx-4"
+                                href="./contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="d-flex align-items-center gap-5">
-                <div class="contact-no">
+                <div class="contact-no d-xl-flex d-none">
                     <span>Call Us</span><a class="fw-medium text-decoration-underline" href="">(+91)321 782 110</a>
                 </div>
                 <div class="d-flex align-items-center gap-4">
@@ -57,9 +60,44 @@
                     </div>
                     <div class="">
                         <button
-                            class="border-0 p-3 btn-hover tran3s  primary-btn-bg-color  rounded-3 fw-medium text-white">Send
+                            class="border-0 p-3 btn-hover tran3s d-lg-flex d-none primary-btn-bg-color  rounded-3 fw-medium text-white">Send
                             us
                             Message</button>
+                        <button
+                            class="border-0 py-2 px-3 d-lg-none d-flex primary-btn-bg-color rounded-3 text-white fw-medium"
+                            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">
+                            <i class="bi bi-list "></i>
+                        </button>
+                        <div>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                                aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header justify-content-between">
+                                    <div class="offcanvas-title" id="offcanvasExampleLabel">
+                                        <img src="./assets/images/logo_02.png" alt="" width="120px">
+                                    </div>
+                                    <a type="" class="border-0 bg-none fs-1 d-inline-block" data-bs-dismiss="offcanvas"
+                                        aria-label="Close">
+                                        <i class="bi bi-x text-white"></i>
+                                    </a>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        <ul>
+                                            <li class="py-2"><a href="#" class="fs-3">Home</a></li>
+                                            <li class="slid-down py-2"><a href="#" class="fs-3">Pages</a>
+                                                <ul class=" down">
+                                                    <li><a class="fs-3" href="./testimonial.html">Testimonial</a></li>
+                                                    <li><a class="fs-3" href="./faq.html">FAQ</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="py-2"><a href="./blog.html" class="fs-3">Blog</a></li>
+                                            <li class="py-2"><a href="./contact.html" class="fs-3">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,8 +107,8 @@
     </header>
     <section class="hero-section">
         <div class="container">
-            <div class="row">
-                <div class="col-7">
+            <div class="row gy-4 flex-wrap-reverse">
+                <div class="col-lg-7 col-12">
                     <div class="left-content">
                         <h1 class="hero-heading">
                             Customer Ai Solution for user
@@ -87,9 +125,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-lg-5 col-12">
                     <div class="right-content position-relative illustration-holder">
-                        <img src="./assets/images/ils_13.svg" alt="" class="img-fluid">
+                        <img src="./assets/images/ils_13.svg" alt="" class="" width="100%">
                         <img src="./assets/images/ils_13_1.svg" class="position-absolute rotate-img" alt="">
                     </div>
                 </div>
@@ -99,7 +137,7 @@
     <section class="service-section mt-130">
         <div class="container">
             <div class="oval-shape"></div>
-            <div class="service-heading mt-5 d-flex gap-5 align-items-center">
+            <div class="service-heading mt-5 d-flex  gap-5 align-items-center">
                 <h2><span class="primary-btn-font-color text-decoration-underline">Services</span>We Provide with
                     Quality.</h2>
                 <p class="m-0 fs-5 fw-light">NLP entails applying algorithms to identify and extract rules such that the
@@ -109,7 +147,7 @@
                 <div class="oval-shape"></div>
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="service-card">
                         <div>
                             <img src="./assets/images/icon_31.svg" alt="">
@@ -120,7 +158,7 @@
                         <span><i class="bi bi-arrow-right fs-1"></i></span>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="service-card active-box">
                         <div>
                             <img src="./assets/images/icon_32.svg" alt="">
@@ -131,7 +169,7 @@
                         <span><i class="bi bi-arrow-right fs-1"></i></span>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-12">
                     <div class="service-card">
                         <div>
                             <img src="./assets/images/icon_33.svg" alt="">
@@ -149,9 +187,9 @@
     <section class="mt-130 audience  pb-120">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-6">
-                    <div class="audience-section ">
-                        <img src="./assets/images/ils_14.svg" alt="" class="img-fluid">
+                <div class="col-lg-6 col-12">
+                    <div class="audience-section position-relative back-before">
+                        <img src="./assets/images/ils_14.svg" alt="" class="" width="100%">
                         <div class="group-image">
                             <img src="./assets/images/ils_14_4.svg" alt="">
                             <img src="./assets/images/ils_14_5.svg" alt="">
@@ -159,7 +197,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-12">
                     <div class="audience-info ms-5">
                         <div
                             class="primary-btn-bg-light-color d-inline-block primary-btn-font-color px-3 py-1 rounded-5">
@@ -197,26 +235,26 @@
     <section class="work-section mt-130">
         <div class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="col-lg-5 col-12">
                     <div class="work-info">
                         <div
-                            class="primary-btn-bg-light-color d-inline-block primary-btn-font-color px-3 py-1 rounded-5">
+                            class="primary-btn-bg-light-color work-process d-inline-block primary-btn-font-color px-3 py-1 rounded-5">
                             WORK PROCESS</div>
                         <h2 class="mt-3 font-60">How sinco <span
                                 class="primary-btn-font-color text-decoration-underline">process</span>
                             & works.</h2>
-
-                        <div class="some-boxes p-4 mt-4 d-flex gap-3">
-                            <div class=" circle ">
-                                <span
-                                    class="primary-btn-font-color fs-5 d-flex justify-content-center align-items-center">1</span>
-                            </div>
-                            <div class="card-info">
-                                <h3 class="fw-semibold">Frame the Problem</h3>
-                                <p class="fw-light">Practice what you learned on realistic SAT test questions.</p>
-                            </div>
+                    </div>
+                    <div class="some-boxes p-4 mt-4 d-flex gap-3">
+                        <div class=" circle ">
+                            <span
+                                class="primary-btn-font-color fs-5 d-flex justify-content-center align-items-center">1</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="fw-semibold">Frame the Problem</h3>
+                            <p class="fw-light">Practice what you learned on realistic SAT test questions.</p>
                         </div>
                     </div>
+
                     <div class="some-boxes p-4 mt-4 d-flex gap-3">
                         <div class=" circle ">
                             <span
@@ -240,7 +278,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-7">
+                <div class="col-lg-7 col-12">
                     <div class="work-image position-relative d-flex justify-content-end">
                         <img src="./assets/images/shape_35.svg" alt="" class="img-fluid position-absolute shape-img">
                         <img src="./assets/images/ils_15.svg" alt="" class="img-fluid">
@@ -260,10 +298,10 @@
         </div>
         </div>
     </section>
-    <section class="mt-130">
+    <section class="mt-130 d-md-flex d-none">
         <div class="container">
             <div class="py-4 inner-container">
-                <div class="row">
+                <div class="row ">
                     <div class="col-4">
                         <div class="text-center pt-4 mb-4">
                             <div><span class="font-60 fw-semibold text-white">20mil</span></div>
@@ -298,12 +336,12 @@
                 <div class="oval-shape"></div>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 col-12">
                     <div>
-                        <img src="./assets/images/ils_16.svg" alt="">
+                        <img src="./assets/images/ils_16.svg" alt="" width="100%">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-12">
                     <div class="contact">
                         <div
                             class="primary-btn-bg-light-color d-inline-block primary-btn-font-color px-3 py-1 rounded-5">
@@ -325,7 +363,7 @@
             <div class="d-flex justify-content-center mt-5">
                 <div class="oval-shape"></div>
             </div>
-            <div class="d-flex gap-5 mt-5 justify-content-center align-items-center">
+            <div class="d-lg-flex d-none  gap-5 mt-5 justify-content-center align-items-center">
                 <div class="only-image">
                     <img src="./assets/images/Plogo-13.png" alt="">
                 </div>
@@ -347,8 +385,8 @@
     <footer class="">
         <div class="container">
             <div class="mb-5">
-                <div class="row">
-                    <div class="col-6">
+                <div class="row gy-4">
+                    <div class="col-lg-6 col-12">
                         <div>
                             <h2 class="mt-3 font-60">Join Our <span
                                     class="primary-btn-font-color text-decoration-underline">Newslatter</span>
@@ -356,7 +394,7 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12">
                         <div>
                             <div class="d-flex position-relative search-box">
                                 <input type="email" placeholder="Enter your email" class="border-0 ">
@@ -369,8 +407,8 @@
                 </div>
             </div>
             <div class="pt-5">
-                <div class="row">
-                    <div class="col-3">
+                <div class="row gy-4">
+                    <div class="col-lg-3 col-6 col-12">
                         <div>
                             <div>
                                 <img src="./assets/images/Plogo-7.png" alt="">
@@ -391,8 +429,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="">
+                    <div class="col-lg-3 col-6 col-12">
+                        <div class="center-info">
                             <h3>Links</h3>
                             <ul class="m-0 p-0 mt-4">
                                 <li class="py-2"><a href="">Home</a></li>
@@ -403,8 +441,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="">
+                    <div class="col-lg-3 col-6 col-12">
+                        <div class="center-info">
                             <h3 class="">Services</h3>
                             <ul class="m-0 p-0 mt-4">
                                 <li class="py-2"><a href="">Artificial Intelligence</a></li>
@@ -415,8 +453,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div>
+                    <div class="col-lg-3 col-6 col-12">
+                        <div class="center-info">
                             <h3>Legal</h3>
                             <ul class="m-0 p-0 mt-4">
                                 <li class="py-2"><a href="">Terms of use</a></li>
@@ -438,6 +476,35 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+        $(document).ready(function () {
+            $('.slid-down').on('click', function () {
+                console.log('hello');
+                $('.down').slideToggle();
+            })
+        })
+        $(window).scroll(function () {
+            if (scrollY > 200) {
+                $('header').addClass('sticky')
+                $('header').removeClass('position-absolute')
+                $('header').removeClass('header-back')
+
+            } else {
+                $('header').removeClass('sticky')
+                $('header').addClass('position-absolute')
+                $('header').addClass('header-back')
+
+            }
+        })
+        $(window).resize(function () {
+            if (screenX < 992) {
+                $('.right-content').removeClass('illustration-holder')
+                $('.audience-section').removeClass('back-before')
+            } else {
+                $('.right-content').addClass('illustration-holder')
+                $('.audience-section').addClass('back-before')
+
+            }
+        })
         var swiper = new Swiper(".mySwiper", {
             pagination: {
                 el: ".swiper-pagination",

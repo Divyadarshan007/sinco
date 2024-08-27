@@ -23,6 +23,7 @@
     gap: 150px;
 }
 
+
 .pb-120 {
     padding-bottom: 120px;
 }
@@ -79,7 +80,7 @@ header {
     z-index: 999;
 }
 
-header:before {
+.header-back:before {
     content: '';
     position: absolute;
     width: 220px;
@@ -91,6 +92,7 @@ header:before {
     border-radius: 50%;
     z-index: -1;
 }
+
 
 .drop-down-menu {
     background-color: #fff;
@@ -107,22 +109,38 @@ header:before {
     display: block;
 }
 
-.drop-down-menu ul li {
-    padding: 8px 15px;
-    border-radius: 8px;
-}
 
-.drop-down-menu ul li:hover {
-    background-color: var(--primary-color);
-}
-
-.drop-down-menu ul li:hover a {
-    color: #fff;
-}
 
 nav ul li a {
     font-size: 18px;
     color: var(--nav-font-color);
+    transition: .3s all linear;
+    position: relative;
+}
+
+
+
+nav ul li .underline::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 15px;
+    transition: 0.3s all linear;
+}
+
+.navbar li:hover a {
+    color: var(--primary-color) !important;
+}
+
+nav ul li:hover .underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 15px;
 }
 
 .active {
@@ -133,10 +151,23 @@ nav ul li a {
 .active::before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 0%;
     height: 2px;
     background-color: var(--primary-color);
     bottom: 15px;
+}
+
+.drop-down-menu ul li {
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.drop-down-menu ul li:hover {
+    background-color: var(--primary-color);
+}
+
+.drop-down-menu ul li:hover a {
+    color: #fff !important;
 }
 
 .contact-no a {
@@ -342,11 +373,11 @@ nav ul li a {
     z-index: 5;
 }
 
-.audience-section {
+.back-before {
     position: relative;
 }
 
-.audience-section:before {
+.back-before:before {
     background: #fff;
     border-radius: 50%;
     box-shadow: 6px 73px 62px rgba(0, 38, 174, .02);
@@ -472,7 +503,13 @@ nav ul li a {
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 73, 140, .05);
     transition: 0.3s all linear;
+}
 
+.isotope-list {
+    background-color: var(--primary-light-color);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: var(--primary-color);
 }
 
 .blog-card:hover {
@@ -486,7 +523,7 @@ nav ul li a {
 }
 
 .blog-info p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .blog-image {
@@ -589,4 +626,78 @@ footer ul li a {
 
 footer ul li a:hover {
     color: var(--primary-color);
+}
+
+/* contact section */
+.contact-card {
+    box-shadow: 0 25px 60px rgba(0, 65, 113, .05);
+    border-radius: 20px;
+    padding: 30px 20px 40px;
+    background-color: #fff;
+
+    height: 100%;
+
+
+}
+
+.contact-card a {
+    color: var(--primary-font-light-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-card p {
+    font-size: 20px;
+    color: var(--primary-font-light-color);
+    opacity: .5;
+}
+
+.contact-card span {
+    cursor: pointer;
+}
+
+.contact-card span:hover {
+    text-decoration: underline !important;
+}
+
+.contact-logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+}
+
+.contact-form form textarea::placeholder {
+    padding: 20px 0 0 20px;
+    opacity: .5;
+
+}
+
+.contact-form form input::placeholder {
+    padding: 10px 0 0 10px;
+    opacity: .5;
+}
+
+.map {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.sticky {
+    position: sticky !important;
+    top: 0 !important;
+    background-color: #fff !important;
+    z-index: 999999;
+    box-shadow: 0 13px 35px -12px rgba(35, 35, 35, .1);
+}
+
+.down {
+    padding: 10px;
+    background-color: #17192b !important;
+    display: none;
+
+}
+
+.offcanvas-body a {
+    color: #fff;
 }

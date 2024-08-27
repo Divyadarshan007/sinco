@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +12,37 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <header class="px-5 py-4">
+    <header class="px-5 py-4  new-bg-color">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex gap-150 align-items-center">
                 <div class="logo">
                     <img src="./assets/images/logo_03.png" alt="" width="90px">
                 </div>
-                <nav class="navbar navbar-expand-lg ">
-                    <ul class="navbar gap-4 m-0 p-0">
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 active mx-4" href="">Home</a></li>
-                        <li class="nav-item pages"> <a class="nav-link fw-medium py-3 mx-4" href="">Pages</a>
+                <nav class="navbar navbar-expand-lg d-lg-flex d-none ">
+                    <ul class="navbar gap-2 m-0 p-0">
+                        <li class="nav-item"> <a class="nav-link fw-medium py-3 active mx-4"
+                                href="./index.html">Home</a></li>
+                        <li class="nav-item pages"> <a class="nav-link fw-medium underline py-3 mx-4" href="">Pages</a>
                             <div class="drop-down-menu">
                                 <ul class="m-0 p-0">
-                                    <li><a href="">Testimonial</a></li>
-                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="./testimonial.html">Testimonial</a></li>
+                                    <li><a href="./faq.html">FAQ</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 mx-4" href="">Portfolio</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 mx-4" href="">Blog</a></li>
-                        <li class="nav-item"> <a class="nav-link fw-medium py-3 mx-4" href="">Contact</a></li>
+
+                        <li class="nav-item"> <a class="nav-link fw-medium underline py-3 mx-4"
+                                href="./blog.html">Blog</a></li>
+                        <li class="nav-item"> <a class="nav-link fw-medium underline py-3 mx-4"
+                                href="./contact.html">Contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <div class="d-flex align-items-center gap-5">
-                <div class="contact-no">
+                <div class="contact-no d-xl-flex d-none">
                     <span>Call Us</span><a class="fw-medium text-decoration-underline" href="">(+91)321 782 110</a>
                 </div>
                 <div class="d-flex align-items-center gap-4">
@@ -47,19 +53,141 @@
                     </div>
                     <div class="">
                         <button
-                            class="border-0 p-3 btn-hover tran3s  primary-btn-bg-color  rounded-3 fw-medium text-white">Send
+                            class="border-0 p-3 btn-hover tran3s d-lg-flex d-none primary-btn-bg-color  rounded-3 fw-medium text-white">Send
                             us
                             Message</button>
+                        <button
+                            class="border-0 py-2 px-3 d-lg-none d-flex primary-btn-bg-color rounded-3 text-white fw-medium"
+                            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">
+                            <i class="bi bi-list "></i>
+                        </button>
+                        <div>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                                aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header justify-content-between">
+                                    <div class="offcanvas-title" id="offcanvasExampleLabel">
+                                        <img src="./assets/images/logo_02.png" alt="" width="120px">
+                                    </div>
+                                    <a type="" class="border-0 bg-none fs-1 d-inline-block" data-bs-dismiss="offcanvas"
+                                        aria-label="Close">
+                                        <i class="bi bi-x text-white"></i>
+                                    </a>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        <ul>
+                                            <li class="py-2"><a href="./index.html" class="fs-3">Home</a></li>
+                                            <li class="slid-down py-2"><a href="#" class="fs-3">Pages</a>
+                                                <ul class=" down">
+                                                    <li><a class="fs-3" href="./testimonial.html">Testimonial</a></li>
+                                                    <li><a class="fs-3" href="./faq.html">FAQ</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="py-2"><a href="./blog.html" class="fs-3">Blog</a></li>
+                                            <li class="py-2"><a href="./contact.html" class="fs-3">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </header>
+    <div class="mt-130 text-center ">
+        <h2 class="font-60">Contact</h2>
+
+    </div>
+    <div class="d-flex justify-content-center mt-4 w-100 ">
+        <ul class="breadcrumb m-0 p-0 text-center d-flex align-items-center">
+            <li class="breadcrumb-item"><a href="./index.html" class="text-black ">Home</a></li>
+            <li class="breadcrumb-item"><a href="" class=" primary-btn-font-color">FAQ</a></li>
+        </ul>
+    </div>
+    <section class="pb-120">
+        <div class="contact-section pt-5">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="contact-card d-flex flex-column align-items-center">
+                            <div class="contact-logo d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icon_17.svg" alt="" width="38px">
+                            </div>
+                            <h3 class="pt-4 pb-2">Our Address</h3>
+                            <p class="text-center">1012 Pebda Parkway, Mirpur 2 <br>
+                                Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="contact-card d-flex flex-column align-items-center">
+                            <div class="contact-logo d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icon_18.svg" alt="" width="38px">
+                            </div>
+                            <h3 class="pt-4 pb-2">Contact Info</h3>
+                            <p class="text-center">Open a chat or give us call at </p>
+                            <span class="primary-btn-font-color fs-5">310.841.5500</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="contact-card d-flex flex-column align-items-center">
+                            <div class="contact-logo d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/icon_17.svg" alt="" width="38px">
+                            </div>
+                            <h3 class="pt-4 pb-2">Live Support</h3>
+                            <p class="text-center">Live chat service <br>
+                            </p>
+                            <a href="" class="text-decoration-underline ">www.sincochat.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 pt-5">
+                    <div class="row gy-4">
+                        <div class="col-lg-6 col-12">
+                            <div class="map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29770.107171230393!2d72.794112!3d21.1419136!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1724745237316!5m2!1sen!2sin"
+                                    width="100%" height="570" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="contact-form">
+                                <h2 class="font-60 mb-5">Send Message</h2>
+                                <form>
+                                    <div class="mb-4">
+                                        <label for="exampleInputEmail1" class="form-label">Name*</label>
+                                        <input type="text" class="form-control py-3" id="exampleInputEmail1"
+                                            placeholder="Your Name" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="exampleInputPassword1" class="form-label">Email*</label>
+                                        <input type="email" class="form-control py-3" id="exampleInputPassword1"
+                                            placeholder="Your Email">
+                                    </div>
+                                    <div class="mb-5">
+                                        <textarea name="" id="" placeholder="Your Message*" class="p-0 form-control"
+                                            rows="5"></textarea>
+                                    </div>
+                                    <button type="submit"
+                                        class="primary-btn-bg-color text-white btn-hover request-btn py-3 px-4 border-0 rounded-3 tran3s">Send
+                                        Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="">
         <div class="container">
             <div class="mb-5">
-                <div class="row">
-                    <div class="col-6">
+                <div class="row gy-4">
+                    <div class="col-lg-6 col-12">
                         <div>
                             <h2 class="mt-3 font-60">Join Our <span
                                     class="primary-btn-font-color text-decoration-underline">Newslatter</span>
@@ -67,7 +195,7 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12">
                         <div>
                             <div class="d-flex position-relative search-box">
                                 <input type="email" placeholder="Enter your email" class="border-0 ">
@@ -80,8 +208,8 @@
                 </div>
             </div>
             <div class="pt-5">
-                <div class="row">
-                    <div class="col-3">
+                <div class="row gy-4">
+                    <div class="col-lg-3 col-6 col-12">
                         <div>
                             <div>
                                 <img src="./assets/images/Plogo-7.png" alt="">
@@ -102,8 +230,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="">
+                    <div class="col-lg-3 col-6 col-12">
+                        <div class="center-info">
                             <h3>Links</h3>
                             <ul class="m-0 p-0 mt-4">
                                 <li class="py-2"><a href="">Home</a></li>
@@ -114,8 +242,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="">
+                    <div class="col-lg-3 col-6 col-12">
+                        <div class="center-info">
                             <h3 class="">Services</h3>
                             <ul class="m-0 p-0 mt-4">
                                 <li class="py-2"><a href="">Artificial Intelligence</a></li>
@@ -126,8 +254,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div>
+                    <div class="col-lg-3 col-6 col-12">
+                        <div class="center-info">
                             <h3>Legal</h3>
                             <ul class="m-0 p-0 mt-4">
                                 <li class="py-2"><a href="">Terms of use</a></li>
@@ -141,6 +269,32 @@
             </div>
         </div>
     </footer>
-    
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slid-down').on('click', function () {
+                console.log('hello');
+                $('.down').slideToggle();
+            })
+        })
+        $(window).scroll(function () {
+            if (scrollY > 100) {
+                $('header').addClass('sticky')
+
+
+
+            } else {
+                $('header').removeClass('sticky')
+
+
+
+            }
+        })
+    </script>
 </body>
+
 </html>
