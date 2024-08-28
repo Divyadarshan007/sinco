@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <!-- swiper external css link -->
     <link rel="stylesheet" href="./assets/css/swiper.css">
+    <!-- fav icon css -->
+    <link rel="icon" href="./assets/images/imageedit_1_7141411641.png">
     <title>Document</title>
 </head>
 
@@ -104,6 +106,16 @@
 
 
     </header>
+    <div class="mt-130 text-center ">
+        <h2 class="font-60">Testimonial</h2>
+
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+        <ul class="breadcrumb m-0 p-0 text-center">
+            <li class="breadcrumb-item"><a href="./index.html" class="text-black">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" class="primary-btn-font-color">Testimonial</a></li>
+        </ul>
+    </div>
     <section class="mt-130 bg-color pb-120">
         <div class="container">
             <div class="text-center">
@@ -256,6 +268,11 @@
             </div>
         </div>
     </footer>
+    <div class="fixed-pos">
+        <div class="scroll-top">
+            <i class="bi bi-arrow-up"></i>
+        </div>
+    </div>
 
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
@@ -273,15 +290,20 @@
         $(window).scroll(function () {
             if (scrollY > 200) {
                 $('header').addClass('sticky')
+                $('.fixed-pos').fadeIn()
 
 
             } else {
                 $('header').removeClass('sticky')
+                $('.fixed-pos').fadeIn()
 
 
 
             }
-        })
+        });
+        $('.fixed-pos').on('click', function () {
+            $('html').animate({ scrollTop: 0 });
+        });
         var swiper = new Swiper(".mySwiper", {
             pagination: {
                 el: ".swiper-pagination",

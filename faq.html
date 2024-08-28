@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- media csss link -->
     <link rel="stylesheet" href="./assets/css/media.css">
+    <!-- fav icon css -->
+    <link rel="icon" href="./assets/images/imageedit_1_7141411641.png">
     <title>Document</title>
 </head>
 
@@ -307,6 +309,11 @@
             </div>
         </div>
     </footer>
+    <div class="fixed-pos">
+        <div class="scroll-top">
+            <i class="bi bi-arrow-up"></i>
+        </div>
+    </div>
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
@@ -322,14 +329,17 @@
         $(window).scroll(function () {
             if (scrollY > 200) {
                 $('header').addClass('sticky')
+                $('.fixed-pos').fadeIn()
 
 
             } else {
                 $('header').removeClass('sticky')
-
-
+                $('.fixed-pos').fadeOut()
             }
         })
+        $('.fixed-pos').on('click', function () {
+            $('html').animate({ scrollTop: 0 });
+        });
     </script>
 </body>
 

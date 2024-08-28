@@ -512,6 +512,10 @@ nav ul li:hover .underline::before {
     color: var(--primary-color);
 }
 
+.filter-button-group {
+    cursor: pointer;
+}
+
 .blog-card:hover {
     transform: translateY(-10px);
 }
@@ -700,4 +704,29 @@ footer ul li a:hover {
 
 .offcanvas-body a {
     color: #fff;
+}
+
+/* scroll to top */
+.fixed-pos {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    z-index: 9999999999;
+
+}
+
+.scroll-top {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-top i {
+    color: #fff;
+
 }
